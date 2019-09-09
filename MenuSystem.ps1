@@ -5,7 +5,7 @@
  Author: Damian Leggett
  Date: 12/08/2014
  Keywords: Read-Host, Menu, Switch
- Comments:
+ Comments: Run script in a non ISE environment
    ****************************************************************
   * DO NOT USE IN A PRODUCTION ENVIRONMENT UNTIL YOU HAVE TESTED *
   * THOROUGHLY IN A LAB ENVIRONMENT. USE AT YOUR OWN RISK.  IF   *
@@ -19,8 +19,8 @@ Clear-Host #Clears screen
 Function DrawMenu {
     ## supportfunction to the Menu function below
     param ($menuItems, $menuPosition, $menuTitle)
-    $fcolor = $host.UI.RawUI.ForegroundColor
-    $bcolor = $host.UI.RawUI.BackgroundColor
+    $fcolor = $host.UI.RawUI.ForegroundColor = 'DarkGreen'
+    $bcolor = $host.UI.RawUI.BackgroundColor = 'Black'
     $l = $menuItems.length + 1
     cls
     $menuwidth = $MenuTitle.length + 4
